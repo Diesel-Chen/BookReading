@@ -31,7 +31,7 @@
 		%>
 				<tr>
 			       <td ><%=list.get(i).getBid() %></td>
-				   <td ><img src="<%=request.getContextPath() %>/<%=list.get(i).getBimage() %>" class="hotp"></td>
+				   <td ><img src="<%=request.getContextPath() %><%=list.get(i).getBimage() %>" class="hotp"></td>
 				   <td ><%=list.get(i).getBname() %></td>
 				   <td><%=list.get(i).getBauthor() %></td>
 				   

@@ -72,7 +72,7 @@ public class BookDao {
 	public List<Book> findpaihangbang() throws SQLException {
 		Connection conn = JDBCUtils.getConnection();
 		List<Book> list=new ArrayList<Book>();
-		String sql ="SELECT * FROM book WHERE bid IN (SELECT  bid FROM COMMENT GROUP BY bid ORDER BY COUNT(*) DESC)  LIMIT 0,7";
+		String sql ="SELECT * FROM book WHERE bid IN (SELECT  bid FROM `comment` GROUP BY bid ORDER BY COUNT(*) DESC)  LIMIT 0,7";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		Book book =null;

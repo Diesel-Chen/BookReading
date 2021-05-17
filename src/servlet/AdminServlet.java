@@ -29,7 +29,7 @@ public class AdminServlet extends HttpServlet {
 
 	public void adminDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		request.getSession().invalidate();
-		response.sendRedirect("/Book/admin/index.jsp");
+		response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/admin/index.jsp");
 	}
 
 

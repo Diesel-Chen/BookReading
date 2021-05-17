@@ -56,7 +56,7 @@ public class AdminCategoryServlet extends HttpServlet {
 			CategoryDao ctDao = new CategoryDao();
 			boolean flag = ctDao.categoryDeleteByCid(cid);
 			if(flag == true){
-				response.sendRedirect("/Book/AdminCategoryServlet?method=findAllCats");
+				response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/Book/AdminCategoryServlet?method=findAllCats");
 			}else{
 				request.setAttribute("msg", "删除分类失败，请重新删除");
 				request.getRequestDispatcher("/admin/info.jsp").forward(request, response);
@@ -74,7 +74,7 @@ public class AdminCategoryServlet extends HttpServlet {
 			CategoryDao ctDao = new CategoryDao();
 			boolean flag = ctDao.categoryUpdateByCid(cid,cname);
 			if(flag == true){
-				response.sendRedirect("/Book/AdminCategoryServlet?method=findAllCats");
+				response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/Book/AdminCategoryServlet?method=findAllCats");
 			}else{
 				request.setAttribute("msg", "修改分类失败，请重新添加");
 				request.getRequestDispatcher("/admin/info.jsp").forward(request, response);
@@ -105,7 +105,7 @@ public class AdminCategoryServlet extends HttpServlet {
 			CategoryDao ctDao = new CategoryDao();
 			boolean flag = ctDao.categoryAdd(cname);
 			if(flag == true){
-				response.sendRedirect("/Book/AdminCategoryServlet?method=findAllCats");	
+				response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/AdminCategoryServlet?method=findAllCats");
 			}else{
 				request.setAttribute("msg", "添加分类失败，请重新添加");
 				request.getRequestDispatcher("/admin/info.jsp").forward(request, response);

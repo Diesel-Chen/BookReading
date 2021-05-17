@@ -59,7 +59,7 @@ public class UserServlet extends HttpServlet {
 			
 			request.getSession().removeAttribute("user");
 			
-			response.sendRedirect(request.getContextPath()+"/index.jsp");
+			response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/index.jsp");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -104,7 +104,7 @@ public class UserServlet extends HttpServlet {
 
 			if(user!=null){
 
-				response.sendRedirect(request.getContextPath()+"/index.jsp");
+				response.sendRedirect("https://dieselchen.top"+request.getContextPath()+"/index.jsp");
 			}else{
 				request.setAttribute("msg", "用户名或者密码错误，请重新登录");
 				request.getRequestDispatcher("/jsp/info.jsp").forward(request, response);

@@ -120,7 +120,7 @@
 		for(Book book : MostHots){
 	%>
 			 <div class="kk">
-		        <a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>"><img src="<%=request.getContextPath() %>/<%=book.getBimage() %>" style="height:80%; width: 125px;position:absolute;left:10px;top:10px;"></a>
+		        <a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>"><img src="<%=request.getContextPath()%><%=book.getBimage() %>" style="height:80%; width: 125px;position:absolute;left:10px;top:10px;"></a>
 		        <div style="position:absolute;left:140px;top:10px;"><a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>" class="xb1"><%=book.getBname() %></a></div>
 		        <div style="position:absolute;left:140px;top:68px;width:110px;color:#555;"><%=book.getBauthor() %> <div class="miaoshu"><%=book.getBcontent() %></div></div>
 		        <div style="position:absolute;bottom:10px;left:140px;"><a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>" style="font-family:'宋体';font-weight:bold;font-size:15px;color:#555;text-decoration:none;">立即阅读></a></div>
@@ -134,9 +134,10 @@
 	<%
 		List<Book> MostNews = (List)request.getAttribute("MostNews");
 		for(Book book : MostNews){
-	%>
+
+    %>
 			 <div class="kk1">
-		        <a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>"><img src="<%=request.getContextPath() %>/<%=book.getBimage() %>" style="height:80%; width: 125px;position:absolute;left:10px;top:10px;"></a>
+		        <a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>"><img src="<%=book.getBimage() %>" style="height:80%; width: 125px;position:absolute;left:10px;top:10px;"></a>
 		        <div style="position:absolute;left:140px;top:10px;"><a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>" class="xb1"><%=book.getBname() %></a></div>
 		        <div style="position:absolute;left:140px;top:38px;width:110px;color:#555;"><%=book.getBauthor() %> <div class="miaoshu"><%=book.getBcontent() %></div></div>
 		        <div style="position:absolute;bottom:10px;left:140px;"><a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>" style="font-family:'宋体';font-weight:bold;font-size:15px;color:#555;text-decoration:none;">立即阅读></a></div>

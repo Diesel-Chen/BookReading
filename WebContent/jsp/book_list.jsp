@@ -25,7 +25,7 @@
 			for (Book book : list2) {
 		%>
 			<div class="xk2">
-                <img src="<%=request.getContextPath() %>/<%=book.getBimage() %>" class="zt">
+                <img src="<%=request.getContextPath() %><%=book.getBimage() %>" class="zt">
                     <div class="zzc">
                         <a href="<%=request.getContextPath() %>/BookServlet?method=findBooksByBid&bid=<%=book.getBid() %>"></a>
                     </div>
